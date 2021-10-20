@@ -52,7 +52,7 @@ sumNumbers(numbers);
 // Iteration #3.1 Bonus:
 
 function sum(array) {
-  let sumB = 0;
+  /* let sumB = 0;
   for (let i = 0; i < array.length; i++) {
     if (typeof array[i] === '') {
       sumB += array[i];
@@ -64,7 +64,7 @@ function sum(array) {
     }
     
   }
-  return sumB;
+  return sumB; */
 
 }
 
@@ -137,21 +137,26 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray(wordsInArray) {
-  let newWwordsInArray = wordsInArray.map(function (unique) {
-    return indexOf(wordsInArray);
-  })
-
-}
-
-uniquifyArray(wordsUnique);
+let uniqueChars = function uniquifyArray() {};
+uniqueChars = wordsUnique.filter((element, index) => {
+    return wordsUnique.indexOf(element) === index;
+});
 
 
 // Iteration #6: Find elements
 
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arr, searchingWord) {
+  if (arr.includes(searchingWord)) {
+    return true;
+  } else {
+    return false;
+  }
+
+}
+
+doesWordExist(wordsFind, 'matter');
 
 
 
@@ -171,7 +176,17 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(array, word) {
+  let count = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === array[i]) {
+    count = array[i] + 1;
+    }
+  }
+  return (`The duplicated word ${word} displays ${count} times.`);
+}
+
+howManyTimes(wordsCount, 'truth');
 
 
 
